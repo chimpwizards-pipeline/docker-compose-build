@@ -1,0 +1,15 @@
+version: '3.3'
+services:            
+    action:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            labels:
+                com.github.actions.name: "Docker Compose Build"
+                com.github.actions.description: "Build docker image thru docker-compose file"
+                com.github.actions.icon: "mic"
+                com.github.actions.color: "purple"
+                repository: "http://github.com/chimpwizards-pipeline/docker-compose-build"
+                homepage: "http://github.com/marketplace/chimpwizards"
+                maintainer: "ndru@chimpwizard.com"
+        image: 'chimpwizards/pipeline-docker-compose-build'
